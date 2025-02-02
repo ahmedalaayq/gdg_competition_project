@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../generated/assets.dart';
+import '../widgets/list_item_builder.dart';
 import 'home_page.dart';
 
 class ProfilePage extends StatelessWidget {
 
   final List<Map> listItems =
-  [
+  const[
   {
-    'image':'assets/images/profile/order_svg.png',
+    'image': Assets.profileOrderSvg,
     'title' : 'All Orders'
   },  {
-    'image':'assets/images/profile/wishlist_svg.png',
+    'image':Assets.profileWishlistSvg,
     'title' : 'Wishlist'
   },  {
-    'image':'assets/images/profile/recent.png',
+    'image':Assets.profileRecent,
     'title' : 'Viewed Recently'
   },  {
-    'image':'assets/images/profile/address.png',
+    'image':Assets.profileAddress,
     'title' : 'Address'
   },  {
-    'image':'assets/images/profile/privacy.png',
+    'image':Assets.profilePrivacy,
     'title' : 'Privacy & Policy'
   },
 
   ];
+
+  const ProfilePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +60,7 @@ class ProfilePage extends StatelessWidget {
                  child: CircleAvatar(
                    backgroundColor: Colors.black,
                    radius: 25,
-                   child: Image.asset('assets/images/GDG_Logo_without_name.png'),
+                   child: Image.asset(Assets.imagesGDGLogoWithoutName),
                  ),
                ),
                 Column(
@@ -95,23 +99,4 @@ class ProfilePage extends StatelessWidget {
   }
 }
 
-class ListItemBuilder extends StatelessWidget {
-  const ListItemBuilder({super.key, required this.title, required this.image});
-  final String title;
-  final String image;
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.symmetric(horizontal: 5,vertical: 2),
-      color: Colors.transparent,
-      child: ListTile(
-        leading: CircleAvatar(
-          backgroundImage: AssetImage(image),
-        ),
-        title: Text(title,style: TextStyle(color: Colors.white),),
-        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white,),
-      ),
-    );
-  }
-}

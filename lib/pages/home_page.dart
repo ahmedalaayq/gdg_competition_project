@@ -4,6 +4,8 @@ import 'package:competition_app/widgets/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../generated/assets.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -22,21 +24,21 @@ class _HomePageState extends State<HomePage> {
   ];
 
   final List<Map<String, String>> categories = const [
-    {'image': 'assets/images/categories/laptops.png', 'title': 'Laptops'},
-    {'image': 'assets/images/categories/phones.png', 'title': 'Phones'},
-    {'image': 'assets/images/categories/book_img.png', 'title': 'Books'},
-    {'image': 'assets/images/categories/electronics.png', 'title': 'Electronics'},
-    {'image': 'assets/images/categories/watch.png', 'title': 'Watches'},
-    {'image': 'assets/images/categories/shoes.png', 'title': 'Shoes'},
-    {'image': 'assets/images/categories/cosmetics.png', 'title': 'Cosmetics'},
-    {'image': 'assets/images/categories/clothes.png', 'title': 'Clothes'},
+    {'image': Assets.categoriesLaptops, 'title': 'Laptops'},
+    {'image': Assets.categoriesPhones, 'title': 'Phones'},
+    {'image': Assets.categoriesBookImg, 'title': 'Books'},
+    {'image': Assets.categoriesElectronics, 'title': 'Electronics'},
+    {'image': Assets.categoriesWatch, 'title': 'Watches'},
+    {'image': Assets.categoriesShoes, 'title': 'Shoes'},
+    {'image': Assets.categoriesCosmetics, 'title': 'Cosmetics'},
+    {'image': Assets.categoriesClothes, 'title': 'Clothes'},
   ];
 
-  final List<ProductModel> products = const [
-    ProductModel(image: 'assets/images/products/smart_watch.jpeg', title: 'Smart Watches', price: '10.9\$'),
-    ProductModel(image: 'assets/images/products/T-shirt.jpeg', title: 'T-Shirt', price: '15.9\$'),
-    ProductModel(image: 'assets/images/products/shoes.jpeg', title: 'Shoes', price: '21.55\$'),
-    ProductModel(image: 'assets/images/products/macbook.jpeg', title: 'MacBook', price: '90.99\$'),
+  final List<ProductModel> products = [
+    ProductModel(image: Assets.productsSmartWatch, title: 'Smart Watches', price: '10.9\$'),
+    const ProductModel(image: Assets.productsTShirt, title: 'T-Shirt', price: '15.9\$'),
+    const ProductModel(image: Assets.productsShoes, title: 'Shoes', price: '21.55\$'),
+    const ProductModel(image: Assets.productsMacbook, title: 'MacBook', price: '90.99\$'),
   ];
 
   @override
