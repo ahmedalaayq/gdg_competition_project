@@ -1,7 +1,7 @@
 # GDG Competition Project
 
 ## Overview
-This project was developed as part of the Google Developer Groups (GDG) On Campus competition at Benha University. It aims to provide an innovative solution for [briefly describe the project's purpose and objectives].
+This project was developed as part of the Google Developer Groups (GDG) On Campus competition at Benha University. It aims to provide development skills 
 
 ## Features
 - **Interactive UI**: User-friendly design for an enhanced experience.
